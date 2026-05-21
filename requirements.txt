@@ -1,0 +1,8 @@
+numpy>=1.24
+matplotlib>=3.7
+scipy>=1.11
+numpy
+matplotlib
+scipy
+imageio          # para generar el video
+tqdm 

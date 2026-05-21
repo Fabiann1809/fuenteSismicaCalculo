@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {table}{\numberline {1}{\ignorespaces Coordenadas de las estaciones sísmicas (km).}}{10}{table.caption.4}%
+\contentsline {table}{\numberline {2}{\ignorespaces Puntos de partida para el método iterativo.}}{11}{table.caption.5}%
+\contentsline {table}{\numberline {3}{\ignorespaces Datos sísmicos simulados ($A_0=2.0$, $\alpha =0.05$, \texttt {seed}$=42$).}}{12}{table.caption.6}%
+\contentsline {table}{\numberline {4}{\ignorespaces Comparación de resultados de estimación. Error posicional $= \|\hat {\mathbf {r}} - \mathbf {r}_0\|_2$ en km.}}{17}{table.caption.16}%
