@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# LaTeX auxiliares
+*.aux
+*.bbl
+*.blg
+*.lof
+*.lot
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Datos generados pesados (opcionales)
+figuras/frames/
+datos/E_cubo*.npy
+datos/A0_cubo*.npy
+
+# OS
+.DS_Store
+Thumbs.db

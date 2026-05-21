@@ -101,26 +101,56 @@ print(f"  y*  estimado : {y_opt:.4f} km   (real: {y0_r})")
 print(f"  E*           : {E_opt:.4e}")
 
 # ------------------------------------------------------------------
-# 4. Análisis de estabilidad: FWHM del pozo mínimo
+# 4. Análisis de estabilidad: curvatura del pozo y ancho local
 # ------------------------------------------------------------------
+#
+# Ajustamos una parábola E_min(z) ≈ E* + (1/2) * c * (z - z*)^2
+# en una ventana centrada en el mínimo. La curvatura c = d²E/dz²|_{z*}
+# cuantifica la sensibilidad en profundidad:
+#   - c grande → pozo agudo → buena resolución en z
+#   - c chico  → pozo plano → mala resolución en z
+#
+# A partir de la parábola, definimos el "ancho local del pozo" como
+# el rango de z donde la aproximación parabólica duplica el mínimo:
+#   E(z) = 2*E*  →  Δz = sqrt(2*E* / c)
+# (ancho total = 2 * Δz)
 
-# Half-maximum: valor a mitad entre el mínimo y el máximo de E_min_z
-E_half = E_opt + 0.5 * (E_min_z.max() - E_opt)
-indices_bajo = np.where(E_min_z <= E_half)[0]
+ventana = 7   # número de puntos a cada lado del mínimo para el ajuste
+i_lo = max(0, iz_opt - ventana)
+i_hi = min(Nz, iz_opt + ventana + 1)
 
-if len(indices_bajo) > 0:
-    z_fwhm_lo = z_grid[indices_bajo[0]]
-    z_fwhm_hi = z_grid[indices_bajo[-1]]
-    fwhm      = abs(z_fwhm_hi - z_fwhm_lo)
+z_window = z_grid[i_lo:i_hi]
+E_window = E_min_z[i_lo:i_hi]
+
+# Ajuste polinomial de grado 2: a*z^2 + b*z + c_const
+coef = np.polyfit(z_window, E_window, 2)
+a_fit, b_fit, c_fit = coef
+
+# Vértice de la parábola: z_min_parab = -b/(2a), curvatura = 2a
+z_min_parab = -b_fit / (2 * a_fit)
+curvature_z = 2 * a_fit   # d²E/dz² en el mínimo
+
+if curvature_z > 0 and E_opt > 0:
+    # Ancho local: Δz tal que la parábola duplica E*
+    delta_z = np.sqrt(2 * E_opt / curvature_z)
+    ancho_local = 2 * delta_z
+    z_lo_local = z_min_parab - delta_z
+    z_hi_local = z_min_parab + delta_z
 else:
-    z_fwhm_lo = z_fwhm_hi = z_opt
-    fwhm = 0.0
+    ancho_local = np.inf
+    z_lo_local = z_hi_local = z_opt
 
-print(f"\n  Ancho del pozo mínimo (FWHM):")
-print(f"    z ∈ [{z_fwhm_lo:.3f}, {z_fwhm_hi:.3f}] km")
-print(f"    FWHM = {fwhm:.4f} km")
-print(f"  → {'Mínimo bien definido' if fwhm < 0.5 else 'Mínimo amplio — menor sensibilidad en z'}")
+print(f"\n  Análisis de la curvatura del pozo en z*:")
+print(f"    Ajuste parabólico en ventana de {2*ventana+1} puntos")
+print(f"    z_min (parábola) = {z_min_parab:.4f} km")
+print(f"    Curvatura d²E/dz² = {curvature_z:.4e}")
+print(f"    Ancho local del pozo (E ≤ 2·E*) = {ancho_local:.4f} km")
+print(f"    z ∈ [{z_lo_local:.3f}, {z_hi_local:.3f}] km")
 
+# Para mantener compatibilidad con la figura siguiente:
+z_fwhm_lo = z_lo_local
+z_fwhm_hi = z_hi_local
+fwhm      = ancho_local
 # ------------------------------------------------------------------
 # 5. Figura 1 — Curva E_min(z) con análisis de estabilidad
 # ------------------------------------------------------------------
@@ -132,9 +162,12 @@ ax.plot(z_grid, E_min_z, color='steelblue', linewidth=2.5,
 
 # Zona FWHM sombreada
 ax.axvspan(z_fwhm_lo, z_fwhm_hi, alpha=0.12, color='steelblue',
-           label=f'FWHM = {fwhm:.3f} km')
-ax.axhline(E_half, color='steelblue', linestyle=':', linewidth=1,
-           alpha=0.6)
+           label=f'Ancho local del pozo = {fwhm:.3f} km')
+# Visualizar la parábola ajustada en la vecindad del mínimo
+z_parab_plot = np.linspace(z_window[0], z_window[-1], 200)
+E_parab_plot = np.polyval(coef, z_parab_plot)
+ax.plot(z_parab_plot, E_parab_plot, color='tomato', linestyle=':',
+        linewidth=1.8, alpha=0.85, label='Ajuste parabólico local')
 
 # Marcadores
 ax.axvline(z_opt, color='tomato', linestyle='--', linewidth=2,

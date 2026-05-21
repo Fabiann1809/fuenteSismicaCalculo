@@ -42,8 +42,31 @@ Az_observed = add_gaussian_noise(Az_clean, NOISE_PARAMS["alpha"],
 
 x0_r, y0_r, z0_r = TRUE_SOURCE["x0"], TRUE_SOURCE["y0"], TRUE_SOURCE["z0"]
 
-# Resultado de fuerza bruta (Fase 4) para comparación
-m_brute = np.array([-1.051, 0.566, -1.212, A0_real])
+# Resultados de fuerza bruta cargados desde scripts 02 y 07
+import json
+
+m_brute_fijo      = None
+m_brute_perfilada = None
+
+ruta_fijo = "datos/resultado_fuerza_bruta.json"
+if os.path.exists(ruta_fijo):
+    with open(ruta_fijo, "r") as f:
+        rb = json.load(f)
+    m_brute_fijo = np.array([rb["x_opt"], rb["y_opt"], rb["z_opt"], rb["A0_fijo"]])
+    print(f"  Fuerza bruta (A0 fijo) cargada: {m_brute_fijo}")
+
+ruta_perfilada = "datos/resultado_fuerza_bruta_perfilada.json"
+if os.path.exists(ruta_perfilada):
+    with open(ruta_perfilada, "r") as f:
+        rp = json.load(f)
+    m_brute_perfilada = np.array([rp["x_opt"], rp["y_opt"],
+                                    rp["z_opt"], rp["A0_opt"]])
+    print(f"  Fuerza bruta (perfilada) cargada: {m_brute_perfilada}")
+
+if m_brute_fijo is None and m_brute_perfilada is None:
+    print("  [!] No se encontró ningún resultado de fuerza bruta.")
+    print("      Ejecuta primero los scripts 02 y/o 07.")
+    sys.exit(1)
 
 # ------------------------------------------------------------------
 # 1. Puntos de partida
@@ -69,13 +92,14 @@ results = {}
 
 for label, m0 in initial_models.items():
     res = iterative_least_squares(
-        m0          = m0,
-        stations    = STATIONS,
-        Az_observed = Az_observed,
-        max_iter    = 200,
-        tol         = 1e-10,
-        damping     = 1e-6,
-    )
+    m0          = m0,
+    stations    = STATIONS,
+    Az_observed = Az_observed,
+    max_iter    = 200,
+    tol         = 1e-8,
+    damping     = 1e-4,   # Levenberg-Marquardt suave: evita divergencia
+)   
+
     results[label] = res
     mf = res['m_final']
     err_pos = np.sqrt((mf[0]-x0_r)**2 + (mf[1]-y0_r)**2 + (mf[2]-z0_r)**2)
@@ -166,7 +190,9 @@ plt.close()
 # 5. Figura 3 — Evolución de cada parámetro (mejor inicio)
 # ------------------------------------------------------------------
 
-best_label = min(results, key=lambda l: results[l]['history_E'][-1])
+# Forzar el inicio "Cerca" para la figura de evolución
+# (coincide con la descripción del documento LaTeX)
+best_label = "Cerca (0, 0, -1)"
 best_res   = results[best_label]
 hist_m     = best_res['history_m']
 param_names = ['$x_0$ (km)', '$y_0$ (km)', '$z_0$ (km)', '$A_0$']
@@ -206,11 +232,23 @@ print("  " + "-" * 63)
 print(f"  {'Fuente real':<30} {x0_r:>8.3f} {y0_r:>8.3f} {z0_r:>8.3f} "
       f"{A0_real:>8.3f} {'—':>10}")
 
-# Fuerza bruta
-eb = np.sqrt((m_brute[0]-x0_r)**2 + (m_brute[1]-y0_r)**2 + (m_brute[2]-z0_r)**2)
-print(f"  {'Fuerza bruta (100³)':<30} {m_brute[0]:>8.3f} {m_brute[1]:>8.3f} "
-      f"{m_brute[2]:>8.3f} {m_brute[3]:>8.3f} {eb:>10.4f}")
+# Fuerza bruta con A0 fijo
+if m_brute_fijo is not None:
+    eb = np.sqrt((m_brute_fijo[0]-x0_r)**2
+                 + (m_brute_fijo[1]-y0_r)**2
+                 + (m_brute_fijo[2]-z0_r)**2)
+    print(f"  {'Fuerza bruta (A0=2 fijo)':<30} "
+          f"{m_brute_fijo[0]:>8.3f} {m_brute_fijo[1]:>8.3f} "
+          f"{m_brute_fijo[2]:>8.3f} {m_brute_fijo[3]:>8.3f} {eb:>10.4f}")
 
+# Fuerza bruta perfilada (4D)
+if m_brute_perfilada is not None:
+    eb = np.sqrt((m_brute_perfilada[0]-x0_r)**2
+                 + (m_brute_perfilada[1]-y0_r)**2
+                 + (m_brute_perfilada[2]-z0_r)**2)
+    print(f"  {'Fuerza bruta (perfilada 4D)':<30} "
+          f"{m_brute_perfilada[0]:>8.3f} {m_brute_perfilada[1]:>8.3f} "
+          f"{m_brute_perfilada[2]:>8.3f} {m_brute_perfilada[3]:>8.3f} {eb:>10.4f}")
 # Iterativo
 for label, res in results.items():
     mf  = res['m_final']

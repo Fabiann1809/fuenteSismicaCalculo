@@ -121,3 +121,91 @@ def error_grid_3d(x_grid: np.ndarray,
         )
 
     return E_cube
+def estimate_A0_optimal(x_grid: np.ndarray,
+                         y_grid: np.ndarray,
+                         z_val: float,
+                         stations: np.ndarray,
+                         Az_observed: np.ndarray) -> np.ndarray:
+    """
+    Estimación analítica de A0 que minimiza E para cada (x, y) en un corte z=cte.
+
+    Derivando ∂E/∂A0 = 0 a (x,y,z) fijo:
+
+        A0_hat(x,y,z) = sum_i (Az_obs_i * u_i) / sum_i (u_i^2)
+        donde u_i = exp(-R_i) / R_i
+
+    Parámetros
+    ----------
+    x_grid, y_grid : arrays 1D
+    z_val          : float
+    stations       : array (M, 3)
+    Az_observed    : array (M,)
+
+    Retorna
+    -------
+    np.ndarray shape (Ny, Nx)
+        Mapa 2D de A0_hat para ese corte.
+    """
+    XX, YY = np.meshgrid(x_grid, y_grid)
+    ZZ     = np.full_like(XX, z_val)
+
+    candidates = np.stack([XX.ravel(), YY.ravel(), ZZ.ravel()], axis=1)
+    diff = candidates[:, np.newaxis, :] - stations[np.newaxis, :, :]
+    R    = np.sqrt(np.sum(diff**2, axis=2))      # (N, M)
+    u    = np.exp(-R) / R                         # (N, M)
+
+    numer = np.sum(Az_observed[np.newaxis, :] * u, axis=1)   # (N,)
+    denom = np.sum(u**2, axis=1)                              # (N,)
+
+    A0_hat = numer / denom
+    return A0_hat.reshape(XX.shape)
+
+
+def error_profiled_slice(x_grid: np.ndarray,
+                          y_grid: np.ndarray,
+                          z_val: float,
+                          stations: np.ndarray,
+                          Az_observed: np.ndarray) -> tuple:
+    """
+    Evalúa la función de error perfilada (con A0 optimizado en cada celda).
+
+        E_perfilada(x,y,z) = min_A0 E(x,y,z,A0)
+                           = sum_i (Az_obs_i - A0_hat * u_i)^2
+
+    Esta función no requiere fijar A0 y permite que la búsqueda por grilla
+    estime simultáneamente la posición y la amplitud, igual que el iterativo.
+
+    Parámetros
+    ----------
+    x_grid, y_grid : arrays 1D
+    z_val          : float
+    stations       : array (M, 3)
+    Az_observed    : array (M,)
+
+    Retorna
+    -------
+    (E_map, A0_map) : tupla de np.ndarray, ambos shape (Ny, Nx)
+        E_map  : función de error perfilada
+        A0_map : A0 óptimo en cada (x,y)
+    """
+    XX, YY = np.meshgrid(x_grid, y_grid)
+    ZZ     = np.full_like(XX, z_val)
+
+    candidates = np.stack([XX.ravel(), YY.ravel(), ZZ.ravel()], axis=1)
+    diff = candidates[:, np.newaxis, :] - stations[np.newaxis, :, :]
+    R    = np.sqrt(np.sum(diff**2, axis=2))       # (N, M)
+    u    = np.exp(-R) / R                          # (N, M)
+
+    # A0 óptimo por celda
+    numer  = np.sum(Az_observed[np.newaxis, :] * u, axis=1)
+    denom  = np.sum(u**2, axis=1)
+    A0_hat = numer / denom                         # (N,)
+
+    # Amplitudes predichas con A0 óptimo
+    Az_pred = A0_hat[:, np.newaxis] * u            # (N, M)
+
+    # Error perfilado
+    E_flat = np.sum((Az_observed[np.newaxis, :] - Az_pred)**2, axis=1)
+
+    Ny, Nx = XX.shape
+    return E_flat.reshape(Ny, Nx), A0_hat.reshape(Ny, Nx)

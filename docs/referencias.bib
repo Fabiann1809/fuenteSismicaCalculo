@@ -1,9 +1,47 @@
+% ============================================================
+% Referencias bibliográficas
+% Proyecto: Localización de Fuente Sísmica – Problema Inverso
+% Cálculo Multivariable
+% ============================================================
+
+% ---------- LIBROS FUNDAMENTALES ----------
+
 @book{aster2019parameter,
   title     = {Parameter Estimation and Inverse Problems},
   author    = {Aster, Richard C. and Borchers, Brian and Thurber, Clifford H.},
   year      = {2019},
   edition   = {3},
-  publisher = {Elsevier}
+  publisher = {Elsevier},
+  address   = {Amsterdam},
+  isbn      = {978-0-12-804651-7}
+}
+
+@book{tarantola2005inverse,
+  title     = {Inverse Problem Theory and Methods for Model Parameter Estimation},
+  author    = {Tarantola, Albert},
+  year      = {2005},
+  publisher = {SIAM},
+  address   = {Philadelphia},
+  isbn      = {978-0-89871-572-9}
+}
+
+@book{shearer2019introduction,
+  title     = {Introduction to Seismology},
+  author    = {Shearer, Peter M.},
+  year      = {2019},
+  edition   = {3},
+  publisher = {Cambridge University Press},
+  address   = {Cambridge},
+  isbn      = {978-1-107-18447-3}
+}
+
+@book{stein2003introduction,
+  title     = {An Introduction to Seismology, Earthquakes, and Earth Structure},
+  author    = {Stein, Seth and Wysession, Michael},
+  year      = {2003},
+  publisher = {Blackwell Publishing},
+  address   = {Oxford},
+  isbn      = {978-0-86542-078-6}
 }
 
 @book{sherriff1995exploration,
@@ -11,5 +49,217 @@
   author    = {Sheriff, Robert E. and Geldart, Lloyd P.},
   year      = {1995},
   edition   = {2},
-  publisher = {Cambridge University Press}
+  publisher = {Cambridge University Press},
+  address   = {Cambridge},
+  isbn      = {978-0-521-46826-7}
+}
+
+@book{nocedal2006numerical,
+  title     = {Numerical Optimization},
+  author    = {Nocedal, Jorge and Wright, Stephen J.},
+  year      = {2006},
+  edition   = {2},
+  publisher = {Springer},
+  address   = {New York},
+  series    = {Springer Series in Operations Research},
+  isbn      = {978-0-387-30303-1}
+}
+
+@book{bjorck1996numerical,
+  title     = {Numerical Methods for Least Squares Problems},
+  author    = {Bj{\"o}rck, {\AA}ke},
+  year      = {1996},
+  publisher = {SIAM},
+  address   = {Philadelphia},
+  isbn      = {978-0-89871-360-2}
+}
+
+@book{golub2013matrix,
+  title     = {Matrix Computations},
+  author    = {Golub, Gene H. and Van Loan, Charles F.},
+  year      = {2013},
+  edition   = {4},
+  publisher = {Johns Hopkins University Press},
+  address   = {Baltimore},
+  isbn      = {978-1-4214-0794-4}
+}
+
+@book{stewart2009marsden,
+  title     = {Vector Calculus},
+  author    = {Marsden, Jerrold E. and Tromba, Anthony},
+  year      = {2012},
+  edition   = {6},
+  publisher = {W. H. Freeman},
+  address   = {New York},
+  isbn      = {978-1-4292-1508-4}
+}
+
+% ---------- ARTÍCULOS HISTÓRICOS Y METODOLÓGICOS ----------
+
+@article{levenberg1944method,
+  title   = {A method for the solution of certain non-linear problems in least squares},
+  author  = {Levenberg, Kenneth},
+  journal = {Quarterly of Applied Mathematics},
+  volume  = {2},
+  number  = {2},
+  pages   = {164--168},
+  year    = {1944},
+  doi     = {10.1090/qam/10666}
+}
+
+@article{marquardt1963algorithm,
+  title   = {An algorithm for least-squares estimation of nonlinear parameters},
+  author  = {Marquardt, Donald W.},
+  journal = {Journal of the Society for Industrial and Applied Mathematics},
+  volume  = {11},
+  number  = {2},
+  pages   = {431--441},
+  year    = {1963},
+  doi     = {10.1137/0111030}
+}
+
+@article{geiger1912probability,
+  title   = {Probability method for the determination of earthquake epicenters
+             from the arrival time only},
+  author  = {Geiger, Ludwig},
+  journal = {Bulletin of St. Louis University},
+  volume  = {8},
+  pages   = {60--71},
+  year    = {1912}
+}
+
+@article{tikhonov1963regularization,
+  title   = {Solution of incorrectly formulated problems and the regularization method},
+  author  = {Tikhonov, Andrey N.},
+  journal = {Soviet Mathematics Doklady},
+  volume  = {4},
+  pages   = {1035--1038},
+  year    = {1963}
+}
+
+% ---------- LOCALIZACIÓN SÍSMICA: REFERENCIAS ESPECÍFICAS ----------
+
+@article{lomax2000probabilistic,
+  title   = {Probabilistic earthquake location in {3D} and layered models},
+  author  = {Lomax, Anthony and Virieux, Jean and Volant, Philippe
+             and Berge-Thierry, Catherine},
+  journal = {Advances in Seismic Event Location},
+  pages   = {101--134},
+  year    = {2000},
+  publisher = {Springer},
+  doi     = {10.1007/978-94-015-9536-0_5}
+}
+
+@article{husen2010earthquake,
+  title   = {Earthquake location accuracy},
+  author  = {Husen, Stephan and Hardebeck, Jeanne L.},
+  journal = {Community Online Resource for Statistical Seismicity Analysis},
+  year    = {2010},
+  doi     = {10.5078/corssa-55815573}
+}
+
+@article{thurber1985nonlinear,
+  title   = {Nonlinear earthquake location: theory and examples},
+  author  = {Thurber, Clifford H.},
+  journal = {Bulletin of the Seismological Society of America},
+  volume  = {75},
+  number  = {3},
+  pages   = {779--790},
+  year    = {1985}
+}
+
+@article{waldhauser2000double,
+  title   = {A double-difference earthquake location algorithm:
+             method and application to the northern {H}ayward fault, {C}alifornia},
+  author  = {Waldhauser, Felix and Ellsworth, William L.},
+  journal = {Bulletin of the Seismological Society of America},
+  volume  = {90},
+  number  = {6},
+  pages   = {1353--1368},
+  year    = {2000},
+  doi     = {10.1785/0120000006}
+}
+
+% ---------- HERRAMIENTAS COMPUTACIONALES ----------
+
+@article{harris2020array,
+  title    = {Array programming with {NumPy}},
+  author   = {Harris, Charles R. and Millman, K. Jarrod and van der Walt,
+              St{\'e}fan J. and others},
+  journal  = {Nature},
+  volume   = {585},
+  number   = {7825},
+  pages    = {357--362},
+  year     = {2020},
+  doi      = {10.1038/s41586-020-2649-2}
+}
+
+@article{virtanen2020scipy,
+  title    = {{SciPy} 1.0: fundamental algorithms for scientific computing in {Python}},
+  author   = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and others},
+  journal  = {Nature Methods},
+  volume   = {17},
+  number   = {3},
+  pages    = {261--272},
+  year     = {2020},
+  doi      = {10.1038/s41592-019-0686-2}
+}
+
+@article{hunter2007matplotlib,
+  title   = {Matplotlib: A {2D} graphics environment},
+  author  = {Hunter, John D.},
+  journal = {Computing in Science \& Engineering},
+  volume  = {9},
+  number  = {3},
+  pages   = {90--95},
+  year    = {2007},
+  doi     = {10.1109/MCSE.2007.55}
+}
+
+% ---------- AMPLITUDES Y ATENUACIÓN SÍSMICA ----------
+
+@article{aki1980attenuation,
+  title   = {Attenuation of shear-waves in the lithosphere for frequencies
+             from 0.05 to 25 {Hz}},
+  author  = {Aki, Keiichi},
+  journal = {Physics of the Earth and Planetary Interiors},
+  volume  = {21},
+  number  = {1},
+  pages   = {50--60},
+  year    = {1980},
+  doi     = {10.1016/0031-9201(80)90019-9}
+}
+
+@article{boore2003prediction,
+  title   = {Prediction of ground motion from earthquakes},
+  author  = {Boore, David M.},
+  journal = {Pure and Applied Geophysics},
+  volume  = {160},
+  number  = {3--4},
+  pages   = {635--676},
+  year    = {2003},
+  doi     = {10.1007/PL00012553}
+}
+
+% ---------- ANÁLISIS DE INCERTIDUMBRE / MATRIZ DE INFORMACIÓN ----------
+
+@book{menke2018geophysical,
+  title     = {Geophysical Data Analysis: Discrete Inverse Theory},
+  author    = {Menke, William},
+  year      = {2018},
+  edition   = {4},
+  publisher = {Academic Press},
+  address   = {London},
+  isbn      = {978-0-12-813555-6}
+}
+
+@article{backus1968resolving,
+  title   = {The resolving power of gross earth data},
+  author  = {Backus, George and Gilbert, Freeman},
+  journal = {Geophysical Journal International},
+  volume  = {16},
+  number  = {2},
+  pages   = {169--205},
+  year    = {1968},
+  doi     = {10.1111/j.1365-246X.1968.tb00216.x}
 }

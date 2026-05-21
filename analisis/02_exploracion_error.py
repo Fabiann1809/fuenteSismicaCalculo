@@ -98,12 +98,30 @@ iy_opt, ix_opt = np.unravel_index(np.argmin(slice_opt), slice_opt.shape)
 x_opt     = x_grid[ix_opt]
 y_opt     = y_grid[iy_opt]
 
+
 print(f"\n  Mínimo global encontrado:")
 print(f"    x* = {x_opt:.3f} km  (real: {x0_real})")
 print(f"    y* = {y_opt:.3f} km  (real: {y0_real})")
 print(f"    z* = {z_opt:.3f} km  (real: {z0_real})")
 print(f"    E* = {E_opt:.6e}")
 
+# ------------------------------------------------------------------
+# Guardar resultado de fuerza bruta para uso en script 04
+# ------------------------------------------------------------------
+
+os.makedirs("datos", exist_ok=True)
+resultado_fuerza_bruta = {
+    "x_opt": float(x_opt),
+    "y_opt": float(y_opt),
+    "z_opt": float(z_opt),
+    "A0_fijo": float(A0),
+    "E_opt": float(E_opt),
+}
+
+import json
+with open("datos/resultado_fuerza_bruta.json", "w") as f:
+    json.dump(resultado_fuerza_bruta, f, indent=2)
+print(f"\n  Resultado de fuerza bruta guardado: datos/resultado_fuerza_bruta.json")
 # ------------------------------------------------------------------
 # 4. Figura 1 — Curva E_min(z)
 # ------------------------------------------------------------------

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.13)  13 MAY 2026 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.13)  21 MAY 2026 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -74,9 +74,9 @@ Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
 LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
-on input line 10.
+on input line 12.
 LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
- on input line 10.
+ on input line 12.
 
 (C:\Users\LEIDER\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -407,7 +407,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 32.
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
 
 (C:\Users\LEIDER\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
@@ -494,26 +494,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Info: Redefining \. on input line 61.
-LaTeX Info: Redefining \% on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
 
 (C:\Users\LEIDER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
@@ -543,7 +543,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 61.
+Package hyperref Info: Link coloring ON on input line 63.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -584,12 +584,12 @@ Package hyperref Info: Link coloring ON on input line 61.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Couldn't patch \deferred@thm@head!
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
 
 (C:\Users\LEIDER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
 
 
 (C:\Users\LEIDER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -602,95 +602,139 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \newpage
+l.126 \newpage
                [1] (main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
+ [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
  (main.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [2])
+ [3])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
  (main.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [3])
+)
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
  [4] [5] [6]
-[7] [8] [9] [10] [11]
-<../figuras/fase1_verificacion.png, id=334, 775.698pt x 359.4228pt>
+[7] [8] [9] [10] [11] [12]
+Overfull \hbox (69.44943pt too wide) in paragraph at lines 576--579
+[]\T1/cmr/m/n/12 Se uti-li-zó la se-mi-lla alea-to-ria \T1/cmtt/m/n/12 seed $\O
+T1/cmr/m/n/12 = 42$ \T1/cmr/m/n/12 a tra-vés del ge-ne-ra-dor mo-derno \T1/cmtt
+/m/n/12 numpy.random.default_rng\T1/cmr/m/n/12 ,
+ []
+
+[13] [14] [15]
+<../figuras/fase1_verificacion.png, id=490, 775.698pt x 359.4228pt>
 File: ../figuras/fase1_verificacion.png Graphic file (type png)
 <use ../figuras/fase1_verificacion.png>
 Package pdftex.def Info: ../figuras/fase1_verificacion.png  used on input line 
-526.
+748.
 (pdftex.def)             Requested size: 427.78773pt x 198.21513pt.
-<../figuras/heatmaps/heatmaps_selected.png, id=336, 1011.78pt x 650.43pt>
+ [16]
+<../figuras/heatmaps/heatmaps_selected.png, id=501, 1011.78pt x 650.43pt>
 File: ../figuras/heatmaps/heatmaps_selected.png Graphic file (type png)
 <use ../figuras/heatmaps/heatmaps_selected.png>
 Package pdftex.def Info: ../figuras/heatmaps/heatmaps_selected.png  used on inp
-ut line 539.
+ut line 761.
 (pdftex.def)             Requested size: 427.78773pt x 275.00488pt.
- [12 <../figuras/fase1_verificacion.png>]
-<../figuras/heatmaps/heatmap_optimal.png, id=343, 505.89pt x 433.62pt>
+<../figuras/heatmaps/heatmap_optimal.png, id=502, 505.89pt x 433.62pt>
 File: ../figuras/heatmaps/heatmap_optimal.png Graphic file (type png)
 <use ../figuras/heatmaps/heatmap_optimal.png>
 Package pdftex.def Info: ../figuras/heatmaps/heatmap_optimal.png  used on input
- line 550.
+ line 772.
 (pdftex.def)             Requested size: 343.99329pt x 294.8577pt.
- [13 <../figuras/heatmaps/heatmaps_selected.png>]
-<../figuras/curva_emin.png, id=349, 650.43pt x 361.35pt>
+ [17 <../figuras/fase1_verificacion.png> <../figuras/heatmaps/heatmaps_selected
+.png>]
+<../figuras/curva_emin.png, id=509, 650.43pt x 361.35pt>
 File: ../figuras/curva_emin.png Graphic file (type png)
 <use ../figuras/curva_emin.png>
-Package pdftex.def Info: ../figuras/curva_emin.png  used on input line 562.
+Package pdftex.def Info: ../figuras/curva_emin.png  used on input line 784.
 (pdftex.def)             Requested size: 388.09775pt x 215.61519pt.
-<../figuras/curva_emin_log.png, id=350, 650.43pt x 361.35pt>
+<../figuras/curva_emin_log.png, id=510, 650.43pt x 361.35pt>
 File: ../figuras/curva_emin_log.png Graphic file (type png)
 <use ../figuras/curva_emin_log.png>
-Package pdftex.def Info: ../figuras/curva_emin_log.png  used on input line 572.
+Package pdftex.def Info: ../figuras/curva_emin_log.png  used on input line 795.
 
 (pdftex.def)             Requested size: 388.09775pt x 215.61519pt.
- [14 <../figuras/heatmaps/heatmap_optimal.png> <../figuras/curva_emin.png>]
-<../figuras/trayectoria_xy.png, id=357, 867.24pt x 361.35pt>
+ [18 <../figuras/heatmaps/heatmap_optimal.png> <../figuras/curva_emin.png>]
+<../figuras/trayectoria_xy.png, id=519, 867.24pt x 361.35pt>
 File: ../figuras/trayectoria_xy.png Graphic file (type png)
 <use ../figuras/trayectoria_xy.png>
-Package pdftex.def Info: ../figuras/trayectoria_xy.png  used on input line 587.
+Package pdftex.def Info: ../figuras/trayectoria_xy.png  used on input line 824.
 
 (pdftex.def)             Requested size: 418.96548pt x 174.57083pt.
-<../figuras/convergencia.png, id=358, 939.51pt x 361.35pt>
+ [19 <../figuras/curva_emin_log.png>]
+<../figuras/comparacion_perfilada.png, id=525, 650.43pt x 361.35pt>
+File: ../figuras/comparacion_perfilada.png Graphic file (type png)
+<use ../figuras/comparacion_perfilada.png>
+Package pdftex.def Info: ../figuras/comparacion_perfilada.png  used on input li
+ne 848.
+(pdftex.def)             Requested size: 418.96548pt x 232.76295pt.
+ [20 <../figuras/trayectoria_xy.png>]
+<../figuras/mapa_A0_perfilado.png, id=531, 939.51pt x 397.485pt>
+File: ../figuras/mapa_A0_perfilado.png Graphic file (type png)
+<use ../figuras/mapa_A0_perfilado.png>
+Package pdftex.def Info: ../figuras/mapa_A0_perfilado.png  used on input line 8
+59.
+(pdftex.def)             Requested size: 418.96548pt x 177.25327pt.
+<../figuras/convergencia.png, id=532, 939.51pt x 361.35pt>
 File: ../figuras/convergencia.png Graphic file (type png)
 <use ../figuras/convergencia.png>
-Package pdftex.def Info: ../figuras/convergencia.png  used on input line 598.
+Package pdftex.def Info: ../figuras/convergencia.png  used on input line 872.
 (pdftex.def)             Requested size: 418.96548pt x 161.13934pt.
- [15 <../figuras/curva_emin_log.png> <../figuras/trayectoria_xy.png>]
-<../figuras/trayectoria_iterativa.png, id=365, 578.16pt x 505.89pt>
+ [21 <../figuras/comparacion_perfilada.png> <../figuras/mapa_A0_perfilado.png>]
+<../figuras/trayectoria_iterativa.png, id=539, 578.16pt x 505.89pt>
 File: ../figuras/trayectoria_iterativa.png Graphic file (type png)
 <use ../figuras/trayectoria_iterativa.png>
 Package pdftex.def Info: ../figuras/trayectoria_iterativa.png  used on input li
-ne 608.
+ne 883.
 (pdftex.def)             Requested size: 343.99329pt x 300.98898pt.
-<../figuras/evolucion_parametros.png, id=366, 794.97pt x 505.89pt>
+<../figuras/evolucion_parametros.png, id=540, 794.97pt x 505.89pt>
 File: ../figuras/evolucion_parametros.png Graphic file (type png)
 <use ../figuras/evolucion_parametros.png>
 Package pdftex.def Info: ../figuras/evolucion_parametros.png  used on input lin
-e 618.
+e 894.
 (pdftex.def)             Requested size: 396.91325pt x 252.58928pt.
- [16 <../figuras/convergencia.png> <../figuras/trayectoria_iterativa.png>] [17 
-<../figuras/evolucion_parametros.png>] [18] [19] [20]
-(main.bbl)
+ [22 <../figuras/convergencia.png> <../figuras/trayectoria_iterativa.png>] [23 
+<../figuras/evolucion_parametros.png>]
+<../figuras/autovalores_GtG.png, id=558, 578.16pt x 361.35pt>
+File: ../figuras/autovalores_GtG.png Graphic file (type png)
+<use ../figuras/autovalores_GtG.png>
+Package pdftex.def Info: ../figuras/autovalores_GtG.png  used on input line 987
+.
+(pdftex.def)             Requested size: 374.86775pt x 234.29025pt.
+ [24]
+<../figuras/hessiano_correlacion.png, id=567, 939.51pt x 397.485pt>
+File: ../figuras/hessiano_correlacion.png Graphic file (type png)
+<use ../figuras/hessiano_correlacion.png>
+Package pdftex.def Info: ../figuras/hessiano_correlacion.png  used on input lin
+e 1023.
+(pdftex.def)             Requested size: 427.78773pt x 180.98332pt.
+ [25 <../figuras/autovalores_GtG.png>]
+<../figuras/parametros_con_error.png, id=574, 578.16pt x 361.35pt>
+File: ../figuras/parametros_con_error.png Graphic file (type png)
+<use ../figuras/parametros_con_error.png>
+Package pdftex.def Info: ../figuras/parametros_con_error.png  used on input lin
+e 1034.
+(pdftex.def)             Requested size: 374.86775pt x 234.29025pt.
+ [26 <../figuras/hessiano_correlacion.png> <../figuras/parametros_con_error.png
+>] [27] [28] [29] [30] [31] (main.bbl [32]) [33]
 File: ../figuras/evolucion_parametros.png Graphic file (type png)
 <use ../figuras/evolucion_parametros.png>
 Package pdftex.def Info: ../figuras/evolucion_parametros.png  used on input lin
-e 849.
+e 1336.
 (pdftex.def)             Requested size: 396.91325pt x 252.58928pt.
- [21] [22] (main.aux
+ [34]
+[35] (main.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -699,48 +743,54 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3274E3499FDEFB566E8299E00D833C79;6636.
+(rerunfilecheck)             Checksum: 3E8C79CDDEF15D42D29EE5871DB36C01;7836.
  ) 
 Here is how much of TeX's memory you used:
- 15169 strings out of 467871
- 243266 string characters out of 5417892
- 681905 words of memory out of 5000000
- 43723 multiletter control sequences out of 15000+600000
- 649924 words of font info for 98 fonts, out of 8000000 for 9000
+ 15381 strings out of 467871
+ 247593 string characters out of 5417892
+ 689579 words of memory out of 5000000
+ 43852 multiletter control sequences out of 15000+600000
+ 652473 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,543b,802s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m0800.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\eccc1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecti1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ectt1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\LEIDER\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\LEIDER\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\LEIDER\App
-Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\LEI
-DER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Us
-ers\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk>
- <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
-728.pk><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmbx8.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmex10.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/LEIDER/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/LEIDER/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/LEID
-ER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/U
-sers/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr6.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LEIDER/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/LEIDER/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (23 pages, 1335641 bytes).
+ 75i,13n,79p,609b,802s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecrm0800.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\eccc1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecti1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\LEIDER\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\LEIDER\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\LEIDER\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\LEI
+DER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Us
+ers\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk>
+ <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2
+074.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm1440.pk> <C:\Users\LEIDER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecbx1728.pk><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/LEIDER/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/LEIDER/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/LEIDER/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
+/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/LEIDER/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/LEIDER/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/LEIDER/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LEIDER
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Use
+rs/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb><C:/Users/LEIDER/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (36 pages, 1746756 bytes).
 PDF statistics:
- 940 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 302 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1285 PDF objects out of 1440 (max. 8388607)
+ 192 named destinations out of 1000 (max. 500000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 
