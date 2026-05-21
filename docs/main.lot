@@ -1,7 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Coordenadas de las estaciones sísmicas (km).}}{13}{table.caption.6}%
-\contentsline {table}{\numberline {2}{\ignorespaces Puntos de partida para el método iterativo.}}{15}{table.caption.10}%
-\contentsline {table}{\numberline {3}{\ignorespaces Datos sísmicos simulados ($A_0=2.0$, $\alpha =0.05$, \texttt {seed}$=42$).}}{16}{table.caption.11}%
-\contentsline {table}{\numberline {4}{\ignorespaces Comparación de resultados de estimación. Error posicional $= \|\hat {\mathbf {r}} - \mathbf {r}_0\|_2$ en km.}}{23}{table.caption.23}%
-\contentsline {table}{\numberline {5}{\ignorespaces Estimación y barras de error ($1\sigma $) de cada parámetro.}}{24}{table.caption.26}%
-\contentsline {table}{\numberline {6}{\ignorespaces Autovectores de $\mathbf {G}^T\mathbf {G}$. Cada columna es una dirección del espacio de parámetros, ordenadas de mejor ($\mathbf {v}_1$, mayor autovalor) a peor resuelta ($\mathbf {v}_4$, menor autovalor).}}{25}{table.caption.30}%
